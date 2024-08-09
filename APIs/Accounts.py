@@ -221,8 +221,6 @@ async def forgot_password(user: User):
     return {"message": "Verification email sent successfully"}
 
 
-def get_password_hash(password: str) -> str:
-    return pwd_context.hash(password)
 
 
 @router.get("/change-password")
