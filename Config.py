@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
-CONNECTION_STRING = ("mongodb+srv://sarohy:mamdoot222@cluster0.i2pig5w.mongodb.net/?retryWrites=true&w=majority&appName"
-                     "=Cluster0&tlsAllowInvalidCertificates=true")
+CONNECTION_STRING = ("mongodb+srv://sarohy:mamdoot222@cluster0.i2pig5w.mongodb.net/?retryWrites=true&w=majority&tls=true&tlsAllowInvalidCertificates=true")
+
 
 client = MongoClient(CONNECTION_STRING)
 
