@@ -6,7 +6,6 @@ client = MongoClient(
     ssl=True,
     tls=True,
     tlsAllowInvalidCertificates=False,
-    tlsInsecure=False
 )
 try:
     client.admin.command('ping')
