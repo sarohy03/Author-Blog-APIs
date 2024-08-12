@@ -1,13 +1,16 @@
 from pymongo import MongoClient
+CONNECTION_STRING = "mongodb+srv://sarohy:mamdoot222@cluster0.i2pig5w.mongodb.net/?retryWrites=true&w=majority"
 
-CONNECTION_STRING = ("mongodb+srv://sarohy:mamdoot222@cluster0.i2pig5w.mongodb.net/?retryWrites=true&w=majority&tls=true&tlsAllowInvalidCertificates=true")
-
-
-client = MongoClient(CONNECTION_STRING)
-
+client = MongoClient(
+    CONNECTION_STRING,
+    ssl=True,
+    tls=True,
+    tlsAllowInvalidCertificates=False,
+    tlsInsecure=False
+)
 try:
     client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
+    print("Pinged your deployment. You successfully connected to Mongssl=true (or tls=true) if SSL is required. Example:oDB!")
 except Exception as e:
     print(e)
 
